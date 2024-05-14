@@ -1,0 +1,19 @@
+<header>
+  <img class="logo-mobile" src="../../img/logo_small.svg" alt="">
+  <span class="header-left">Kanban Project Management Tool</span>
+  <div class="header-right">
+    <a href="../help/help.html" id="Help"><img src="../../img/help.svg" alt=""/></a>
+    <div class="user" id="userInitials" onclick="openPopupMenu()">x</div>
+  </div>
+
+  <div id="popupMenuHeader" class="popup-container d-none" onclick="closePopupMenu()">
+    <div class="user-popup-menu">
+      <div class="popup-menu-div"><a id="headerHelp" href="../help/help.html">Help</a></div>
+      <div class="popup-menu-div"><a id="headerLegalNotice" href="../legal_notice/legal_notice.html">Legal Notice</a></div>
+      <div class="popup-menu-div"><a id="headerPrivacyPolicy" href="../privacy_policy/privacy_policy.html">Privacy Policy</a></div>
+      <div id="headerLogout" class="popup-menu-div" onclick="logout()"><a id="headerLogout" href="../../../index.html">Log out</a></div>
+    </div>
+  </div>
+</header>
+
+<script src="./templates.js"></script>

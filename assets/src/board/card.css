@@ -1,0 +1,320 @@
+.card_small {
+  background-color: white;
+  border-radius: 24px;
+  width: 100%;
+  min-height: 48px;
+  height: fit-content;
+  padding: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.card_small_ghost {
+  min-height: 244px;
+  border: 1px dashed #a8a8a8;
+  box-shadow: 0 0 4px 0 #00000029;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 30px;
+  opacity: 0;
+  cursor: auto;
+}
+
+.task_category {
+  font-size: 16px;
+  color: white;
+  border-radius: 8px;
+  padding: 4px 16px;
+  width: fit-content;
+}
+
+.user_story_bg_color {
+  background-color: rgba(0, 56, 255, 1);
+}
+
+.technical_task_bg_color {
+  background-color: rgba(31, 215, 193, 1);
+}
+
+.task_header {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(42, 54, 71, 1);
+  padding-bottom: 8px;
+}
+
+.task_description {
+  font-weight: 400;
+  color: rgba(168, 168, 168, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progress_bar {
+  background-color: rgba(244, 244, 244, 1);
+  border-radius: 8px;
+  height: 8px;
+  width: 50%;
+}
+
+.subtasks_area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 11px;
+}
+
+.progress_bar_level {
+  background-color: rgba(69, 137, 255, 1);
+  width: 50%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.no_tasks_to_do {
+  border: 1px dashed rgba(168, 168, 168, 1);
+  background-color: rgba(231, 231, 231, 1);
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  color: rgba(168, 168, 168, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+}
+
+.small_card_users_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlapped_contact_icons {
+  display: flex;
+  overflow: hidden;
+}
+
+/* big card style for the task */
+
+.big_card_area {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big_card {
+  background-color: white;
+  border-radius: 30px;
+  width: 525px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  max-height: 84%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  z-index: 10;
+}
+
+.big_card_scrollable_wrapper {
+  max-height: inherit;
+  overflow: auto;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 36px;
+}
+
+.big_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+  scrollbar-width: none;
+  overflow-y: auto;
+  max-height: 100%;
+  width: 100%;
+  padding: 48px 36px;
+  padding-right: 4px;
+}
+
+.big_card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 36px;
+}
+
+.big_card_category {
+  padding: 4px 24px;
+  border-radius: 8px;
+  font-size: 23px;
+  font-family: "Open Sans";
+}
+
+.close_icon {
+  cursor: pointer;
+  border-radius: 50px;
+  height: 32px;
+}
+
+.close_icon:hover {
+  background-color: rgba(238, 238, 238, 1);
+}
+
+.priority_area {
+  display: flex;
+  align-items: center;
+  padding: 4px 18px;
+}
+
+.big_card_assigned_to_area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.big_card_assigned_to {
+  display: flex;
+  align-items: center;
+  padding: 7px 16px;
+  gap: 16px;
+}
+
+.big_card_title {
+  padding-right: 25px;
+  color: rgba(42, 54, 71, 1);
+}
+
+.big_card_assigned_to_list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.big_card_assigned_to_list .contacts_icon {
+  height: 42px;
+  width: 42px;
+}
+
+.big_card_subtask_area {
+  padding: 6px 16px;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: 16px;
+  gap: 16px;
+}
+
+.big_card_subtask_area:hover {
+  background-color: rgba(238, 238, 238, 1);
+}
+
+.big_card_subtask_area img {
+  cursor: pointer;
+}
+
+.big_card_change {
+  cursor: pointer;
+  gap: 8px;
+}
+
+.big_card_change:hover {
+  color: rgba(41, 171, 226, 1);
+  font-weight: 700;
+}
+
+.big_card_footer {
+  gap: 8px;
+  color: rgba(42, 54, 71, 1);
+  font-size: 16px;
+  justify-content: flex-end;
+  padding-right: 36px;
+}
+
+.big_card_edit_content_area {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.big_card_edit_title {
+  display: flex;
+  flex-direction: column;
+}
+
+.big_card_edit_title_header {
+  color: rgba(42, 54, 71, 1);
+  margin-bottom: 8px;
+}
+
+.big_card_edit_title_header_priority {
+  color: rgba(66, 82, 110, 1);
+  font-weight: 700;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.big_card_edit_error {
+  color: rgba(255, 129, 144, 1);
+  font-size: 12px;
+  font-family: "Poppins";
+  margin-top: 4px;
+}
+
+.big_card_edit_input_area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.big_card_edit_description_textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(209, 209, 209, 1);
+  padding: 18px 16px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 120px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: "Inter-Regular";
+}
+
+.big_card_edit_description_textarea:focus {
+  outline: none;
+  border: 1px solid rgba(41, 171, 226, 1);
+}
+
+.big_card_edit_assigned_to_custom_select {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.big_card_edit_ok_button {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px;
+  padding-right: 38px;
+}
+
+.flex_column {
+  flex-direction: column !important;
+}
+
+.flex_row {
+  flex-direction: row;
+}

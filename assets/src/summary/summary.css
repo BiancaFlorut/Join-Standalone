@@ -1,0 +1,277 @@
+/*
+|/////////////////////////////////////////////////////////|
+|                                                         |
+|                                                         |
+|-------------------->summary content<--------------------|
+|                                                         |
+|                                                         |
+|/////////////////////////////////////////////////////////|
+*/
+.summary {
+    padding: 30px;
+    height: calc(100% - 100px);
+}
+/*
+|//////////////////////////////////////////////////|
+|                                                  |
+|                                                  |
+|-------------------->Headline<--------------------|
+|                                                  |
+|                                                  |
+|//////////////////////////////////////////////////|
+*/
+.summary-headline {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 625px;
+    height: 73px;
+}
+.summary-headline h2 {
+    font-weight: 700;
+    font-size: 61px;
+    margin: 0 0;
+}
+.summary-headline p {
+    font-size: 27px;
+    font-weight: 400;
+    margin: 0 0;
+}
+.headline-decoration {
+    height: 59px;
+    width: 3px;
+    background-color: #29abe2;
+}
+.summary-content {
+    padding-top: 30px;
+    height: 84%;
+    display: flex;
+    gap: 64px;
+}
+/*
+|//////////////////////////////////////////////////////////|
+|                                                          |
+|                                                          |
+|-------------------->content box left<--------------------|
+|                                                          |
+|                                                          |
+|//////////////////////////////////////////////////////////|
+*/
+.summary-content-left {
+    display: flex;
+    width: 560px;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+.content-box {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content-box:hover {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+    scale: 1.08;
+    background-color: #2a3647;
+    color: white;
+}
+.theme-img {
+    background-image: url(../../img/done.svg);
+    height: 70px;
+    width: 70px;
+}
+.theme-img:hover {
+    background-image: url(../../img/done_light.svg);
+}
+.summary-content-left-top {
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+}
+.summary-content-left-top-div {
+    display: flex;
+    gap: 18px;
+    width: 47%;
+}
+.content-number {
+    font-size: 64px;
+    font-weight: 600;
+}
+.summary-content-left-top-div span {
+    text-align: center;
+}
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 8px;
+}
+.counter {
+    display: flex;
+    flex-direction: column;
+}
+.summary-content-left-mid {
+    gap: 10%;
+    height: 30%;
+}
+.summary-content-left-mid-div {
+    display: flex;
+    gap: 18px;
+    text-align: center;
+}
+.mid-deco {
+    height: 70%;
+    width: 2px;
+    background-color: #d1d1d1;
+}
+.deadline-div {
+    display: flex;
+    flex-direction: column;
+}
+#deadline {
+    font-size: 21px;
+    font-weight: 700;
+}
+.summary-content-left-bot {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.summary-content-left-bot-div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.summary-decoration-bottom {
+    display: none;
+    background-color: #29abe2;
+    height: 3px;
+    width: 90px;
+    margin-top: 12px;
+}
+/*
+|///////////////////////////////////////////////////////////|
+|                                                           |
+|                                                           |
+|-------------------->content box right<--------------------|
+|                                                           |
+|                                                           |
+|///////////////////////////////////////////////////////////|
+*/
+.summary-content-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#welcome {
+    font-size: 47px;
+    font-weight: 500;
+}
+#welcomeName {
+    font-size: 64px;
+    font-weight: 700;
+    color: #29abe2;
+}
+/*
+|////////////////////////////////////////////////////|
+|                                                    |
+|                                                    |
+|-------------------->responsive<--------------------|
+|                                                    |
+|                                                    |
+|////////////////////////////////////////////////////|
+*/
+@media (max-width: 1130px) {
+    body {
+      flex-direction: column-reverse;
+    }
+    .summary {
+      height: calc(100vh - 220px);
+      padding: 30px;
+    }
+}
+@media (max-width: 725px) {
+    .summary-content {
+        height: calc(100vh - 318px);
+    }
+    .summary-content-right {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 90px;
+        bottom: 80px;
+        left: 0;
+        right: 0;
+        background-color: white;
+    }
+    .summary-content-left {
+        width: 100%;
+        height: 550px;
+        padding: 16px 0;
+    }
+    .summary-headline {
+        flex-direction: column;
+        align-items: unset;
+        gap: 0;
+        height: 100px;
+        width: auto;
+    }
+    .summary-headline h2 {
+        font-size: 47px;
+    }
+    .summary-headline p {
+        font-size: 20px;
+    }
+    .headline-decoration {
+        display: none;
+    }
+    .summary-decoration-bottom {
+        display: block;
+    }
+    .content-box {
+        min-height: 150px;
+    }
+}
+@media (max-width: 450px) {
+    .content-number {
+        font-size: 47px !important;
+    }
+    .description {
+        font-size: 14px;
+    }
+    #deadline {
+        font-size: 16px;
+    }
+    .deadline-div span {
+        font-size: 14px;
+    }
+    .counter span {
+        font-size: 14px;
+    }
+    .summary-content img {
+        height: 40px;
+        width: 40px;
+    }
+    .summary-content-left-mid-div {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .summary-content-left-mid {
+        gap: 5%;
+    }
+    .summary {
+        height: calc(100vh - 180px);
+        padding: 10px 30px;
+    }
+}
+.d-none {
+    display: none;
+}
